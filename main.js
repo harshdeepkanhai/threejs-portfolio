@@ -17,11 +17,21 @@ camera.position.z = 5;
 
 const planeGeometry = new THREE.PlaneGeometry(5, 5, 10, 10);
 
-const planeMaterial = new THREE.MeshPhongMaterial({color: 0xFF0000, side: THREE.DoubleSide});
+const planeMaterial = new THREE.MeshPhongMaterial({color: 0xFF0000, side: THREE.DoubleSide, flatShading: true});
 
 const planeMesh = new THREE.Mesh(planeGeometry, planeMaterial);
 
 scene.add(planeMesh);
+
+const { array } = planeMesh.geometry.attributes.position;
+
+for (let i = 0; i < array.length; i += 3) {
+  const x = array[i];
+  const y = array[i + 1];
+  const z = array[i + 2];
+
+  array[i + 2] = z + Math.random();
+};
 
 const light = new THREE.DirectionalLight(0xFFFFFF, 1);
 
