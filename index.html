@@ -3,11 +3,31 @@
 	<head>
 		<meta charset="utf-8">
 		<title>My first three.js app</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+		<script src="https://cdn.tailwindcss.com"></script>
 		<style>
-			body { margin: 0; }
+			body { margin: 0; -webkit-font-smoothing: antialiased; }
+
+			.font-exo {
+				font-family: "Exo 2", sans-serif;
+			}
+
+			.font-space-mono {
+				font-family: "Space Mono", monospace;
+			}
 		</style>
 	</head>
 	<body>
+		<div id="app">
+			<div class="absolute text-white text-center"
+			style="top: 50%; transform: translate(-50%, -50%); left: 50%;">
+				<h1 class="font-space-mono text-sm uppercase tracking-wide">Harshdeep Kanhai</h1>
+				<p class="font-exo text-4xl">ONE WITH AN QUENCH FOR KNOWLEDGE & LOVES EXPERIMENTS & TECHNOLOGY</p>
+				<a href="https://github.com/harshdeepkanhai" class="border px-4 py-2 rounded-lg text-sm font-space-mono uppercase mt-8 hover:bg-white hover:text-gray-800 inline-block">View Work</a>
+			</div>
+		</div>
 		<script type="module" src="/main.js"></script>
 	</body>
 </html>
