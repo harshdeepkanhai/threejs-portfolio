@@ -263,7 +263,10 @@ document.querySelector('#myWorkBtn')
       y: 1000,
       ease: 'power3.in',
       duration: 1,
-      delay: 2
+      delay: 2,
+      onComplete: () => {
+        window.location = 'https://github.com/harshdeepkanhai'
+      }
     });
   });
 
